@@ -65,8 +65,8 @@ export const IntensityStep = () => {
 									/>
 								</div>
 								<h1 className={cn(
-									'font-mono font-bold mt-2 transition-colors',
-									isSelected ? 'text-violet-500' : 'text-slate-400 group-hover:text-slate-200'
+									'font-mono font-bold mt-2 transition-colors duration-300',
+									isSelected ? 'text-violet-500' : 'text-slate-400 group-hover:text-violet-500'
 								)}>
 									{config.label}
 								</h1>

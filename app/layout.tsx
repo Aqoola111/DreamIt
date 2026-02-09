@@ -1,4 +1,5 @@
 import {Toaster} from "@/components/ui/sonner";
+import {TRPCProvider} from "@/trpc/client";
 import type {Metadata} from "next";
 import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
@@ -25,12 +26,14 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-		<body
-			className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex`}
-		>
-		<Toaster/>
-		{children}
-		</body>
+		<TRPCProvider>
+			<body
+				className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex`}
+			>
+			<Toaster/>
+			{children}
+			</body>
+		</TRPCProvider>
 		</html>
 	);
 }
